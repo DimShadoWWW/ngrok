@@ -1,0 +1,10 @@
+image: mischief/docker-golang
+env:
+  - GOPATH=/var/cache/drone
+script:
+  - make deps
+  - make
+notify:
+  email:
+    recipients:
+      - anielkis@gmail.com
